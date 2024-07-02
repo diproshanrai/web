@@ -1,0 +1,165 @@
+.who {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 100px;
+
+  .content {
+    width: 368px;
+    height: 402pxpx;
+    gap: 48px;
+  }
+  header {
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: left;
+    color: #24272e;
+  }
+  .content p {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    color: #505258;
+  }
+
+  .people {
+    display: flex;
+  }
+
+  .people img {
+    width: 328px;
+    height: 415px;
+    gap: 0px;
+    border-radius: 16px 0px 0px 0px;
+    
+    padding: 20px;
+    border-radius: 30px;
+    justify-content: space-between;
+    transition: 0.3s;
+    display: block;
+    overflow: hidden;
+  }
+
+  .people .adrian {
+    display: flex;
+    flex-direction: column;
+    display: inline-block;
+  }
+
+  .people .sand {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+  }
+
+  label {
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    color: #24272e;
+    
+    
+  }
+
+  .people img:hover {
+    transform: scale(1.1);
+  }
+}
+
+// Responsive
+
+@media (max-width: 1024px) {
+  .who {
+    flex-direction: column;
+    align-items: center;
+
+    .content {
+      width: 80%;
+    }
+
+    header {
+      font-size: 28px;
+    }
+
+    .content p {
+      font-size: 16px;
+    }
+
+    .people {
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        width: 80%;
+        height: auto;
+      }
+
+      .adrian, .sand {
+        margin-top: 20px;
+      }
+    }
+
+    label {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .who {
+    .content {
+      width: 90%;
+    }
+
+    header {
+      font-size: 24px;
+    }
+
+    .content p {
+      font-size: 14px;
+    }
+
+    .people {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    label {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .who {
+    .content {
+      width: 95%;
+    }
+
+    header {
+      font-size: 20px;
+    }
+
+    .content p {
+      font-size: 12px;
+    }
+
+    .people {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    label {
+      font-size: 16px;
+    }
+  }
+}

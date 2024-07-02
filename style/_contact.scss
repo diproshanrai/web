@@ -1,0 +1,160 @@
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  header {
+    width: 173px;
+    height: 40px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: center;
+  }
+  p {
+    width: 498px;
+    height: 54px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: center;
+    color: #7c7d82;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 100px;
+
+  .name {
+    display: flex;
+    margin-bottom: 15px;
+    gap: 10px;
+
+    input[type="text"] {
+      width: 295px;
+    }
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+
+  textarea {
+    resize: vertical;
+    height: 100px;
+  }
+
+  button[type="submit"] {
+    background-color: grey;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+}
+
+// Responsive
+
+@media (max-width: 1024px) {
+  .heading {
+    header {
+      font-size: 28px;
+    }
+
+    p {
+      width: 60%;
+      font-size: 16px;
+    }
+  }
+
+  .form {
+    width: 60%;
+
+    .name {
+      flex-direction: column;
+      gap: 0;
+
+      input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .heading {
+    header {
+      font-size: 24px;
+    }
+
+    p {
+      width: 90%;
+      font-size: 14px;
+    }
+  }
+
+  .form {
+    width: 90%;
+
+    .name {
+      input[type="text"] {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    header {
+      font-size: 20px;
+    }
+
+    p {
+      width: 95%;
+      font-size: 12px;
+    }
+  }
+
+  .form {
+    width: 95%;
+
+    .name {
+      input[type="text"] {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,268 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.homepage {
+  // width: 1440px;
+  height: 728px;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 41, 83, 0.8) 0%,
+      rgba(0, 45, 91, 0.8) 100%
+    );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 1440px 800px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  padding-bottom: 10px;
+
+  .logo {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+  }
+
+  img {
+    width: 70px;
+    height: 70px;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s;
+    padding: 12px 16px;
+  }
+
+  a:hover {
+    background-color: #209b59;
+  }
+
+  .searchBtn {
+    margin-left: 40%;
+    button {
+      background: rgba(0, 0, 0, 0);
+      border: none;
+      cursor: pointer;
+    }
+
+    img {
+      width: 20px;
+      height: auto;
+    }
+  }
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    z-index: 1;
+    width: 300px;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  a {
+    padding: 12px 16px;
+    display: flex;
+    align-items: flex-start;
+    text-decoration: none;
+    color: white;
+  }
+
+  a:hover {
+    background-color: #209b59;
+  }
+
+  a .title {
+    font-weight: bold;
+    color: #666;
+  }
+
+  a .description {
+    font-size: 0.9em;
+    color: #666;
+  }
+}
+
+.searchBar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  background-color: #fff;
+  padding: 10px;
+  width: 500px;
+  border-radius: 12px;
+
+  button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  input[type="search"] {
+    width: 500px;
+    height: 56px;
+    top: -2809px;
+    left: 12015px;
+    gap: 0px;
+    border-radius: 12px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+  }
+}
+
+.hp_cont {
+  color: white;
+  text-align: center;
+  // margin-top: 12%;
+
+  header {
+    font-size: 2em;
+  }
+
+  button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 1px solid #ffe500;
+    border-radius: 5px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    font-size: 1em;
+  }
+  button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+// Responsive
+
+@media (max-width: 1024px) {
+  .homepage {
+    height: 700px;
+    background-size: 100% 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+
+    .logo {
+      font-size: 24px;
+    }
+
+    .searchBtn {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  }
+
+  .searchBar {
+    width: 80%;
+    input[type="search"] {
+      width: 100%;
+    }
+  }
+
+  .hp_cont {
+    header {
+      font-size: 1.5em;
+    }
+
+    button {
+      padding: 8px 16px;
+      font-size: 0.9em;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .navbar {
+    padding: 10px;
+    .logo {
+      font-size: 20px;
+    }
+    a {
+      padding: 8px 12px;
+    }
+    .searchBtn {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  }
+
+  .searchBar {
+    width: 90%;
+    input[type="search"] {
+      width: 100%;
+    }
+  }
+
+  .hp_cont {
+    header {
+      font-size: 1.3em;
+    }
+    button {
+      padding: 6px 12px;
+      font-size: 0.8em;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 5px;
+    .logo {
+      font-size: 18px;
+    }
+    a {
+      padding: 6px 10px;
+    }
+    .searchBtn {
+      margin-left: 0;
+      margin-top: 5px;
+    }
+  }
+
+  .searchBar {
+    width: 95%;
+    input[type="search"] {
+      width: 100%;
+    }
+  }
+
+  .hp_cont {
+    header {
+      font-size: 1.2em;
+    }
+    button {
+      padding: 5px 10px;
+      font-size: 0.7em;
+    }
+  }
+}
